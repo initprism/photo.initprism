@@ -1,0 +1,21 @@
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*
+
+.temp
+
+dist/gallery
+dist/assets/js/
+dist/assets/css/
+dist/assets/world.json
+
+manifester/target
+manifester/cities.json
+manifester/trips.json
+manifester/Cargo.lock
+
+src/Manifest.elm
+
+.firebase
+firebase.json

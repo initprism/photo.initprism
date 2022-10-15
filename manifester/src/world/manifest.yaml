@@ -1,0 +1,33 @@
+places:
+  Korea:
+    Local: 한국
+    Jeju: 제주
+    Andong: 안동
+    Cheongju: 청주
+    Gangneung: 강릉
+    Jinju: 진주
+    Seoul: 서울
+    Yeongdeok: 영덕
+    Danyang: 단양
+
+trips:
+  - name: K01
+    description: Gangneung Korea 2015 with friends
+    cities:
+      - Gangneung
+    dates:
+      - 2015/11
+
+  - name: K02
+    description: Jeju Korea 2021 with friend
+    cities:
+      - Jeju
+    dates:
+      - 2021/08
+
+  - name: K03
+    description: Jeju Korea 2022 Monitorapp
+    cities:
+      - Jeju
+    dates:
+      - 2022/05
