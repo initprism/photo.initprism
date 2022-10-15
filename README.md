@@ -20,13 +20,6 @@ uglifyjs dist/assets/js/initprism.js --compress pure_funcs='F2,F3,F4,F5,F6,F7,F8
 elm-live src/Main.elm -d dist --pushstate -- --output=dist/assets/js/initprism.js --optimize
 ```
 
-## Delpoy
-```
-firebase login
-firebase init
-firebase deploy
-```
-
 ## Dependencies
 - rust
 - elm

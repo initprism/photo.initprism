@@ -18,4 +18,5 @@ manifester/Cargo.lock
 src/Manifest.elm
 
 .firebase
+.firebaserc
 firebase.json
