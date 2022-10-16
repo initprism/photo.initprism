@@ -925,6 +925,7 @@ view model =
                         [ Html.ul [ Html.Attributes.class "icons" ]
                             [ Html.li [] [ Html.a [ Html.Attributes.href "https://www.github.com/initprism/photo.initprism" ] [ Icons.github ] ]
                             , Html.li [] [ Html.a [ Html.Attributes.href "https://telegram.me/initprism" ] [ Icons.telegram ] ]
+                            , Html.li [] [ Html.a [ Html.Attributes.href "https://initprism.com" ] [ Icons.initprism ] ]
                             ]
                         ]
                     ]

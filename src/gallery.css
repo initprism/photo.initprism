@@ -15,12 +15,12 @@ img {
 
 h1 {
     font-size: 1.75em;
-    color: #348899;
+    color: #D9BFA9;
 }
 
 #aside {
-    background: #556688;
-    color: #cce1e6;
+    background: #3B4B59;
+    color: #8EA8BF;
     height: 100%;
     visibility: hidden;
     position: fixed;
@@ -190,7 +190,7 @@ ul.icons li {
 .icon {
   width: 30px;
   height: 30px;
-  stroke: #93D8E5;
+  stroke: #B0C1D9;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -210,7 +210,7 @@ ul.icons li {
 .icon:hover, .icon:focus, .icon:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  stroke: #348899;
+  stroke: #D9BFA9;
 }
 
 .icon:hover {
@@ -218,7 +218,7 @@ ul.icons li {
 }
 
 .icon:active {
-    stroke: #235B66;
+    stroke: #8EA8BF;
 }
 
 .right {
@@ -309,7 +309,7 @@ label > .icon {
 }
 
 .title:hover {
-    color: #348899;
+    color: #D9BFA9;
 }
 
 .burger {
@@ -585,7 +585,7 @@ label > .icon {
 }
 
 .iglobe-cities {
-    fill: #348899;
+    fill: #D9BFA9;
 }
 
 .iglobe-route {

@@ -1,10 +1,11 @@
-module Icons exposing (checkCircle, chevronDown, chevronLeft, chevronRight, chevronUp, circle, github, info, mail, menu, telegram, x)
+module Icons exposing (checkCircle, chevronDown, chevronLeft, chevronRight, chevronUp, circle, github, info, mail, menu, telegram, x, initprism)
 
 import Html exposing (Html)
-import TypedSvg exposing (line, path, polyline, svg)
-import TypedSvg.Attributes exposing (class, cx, cy, d, points, r, viewBox, x1, x2, y1, y2)
+import Color exposing (rgb255)
+import TypedSvg exposing (line, path, polyline, svg, g)
+import TypedSvg.Attributes exposing (class, cx, cy, d, points, r, viewBox, x1, x2, y1, y2, width, height, viewBox, transform, fill)
 import TypedSvg.Core exposing (Svg)
-import TypedSvg.Types exposing (ClipPath(..), Fill(..), px)
+import TypedSvg.Types exposing (ClipPath(..), Fill(..), Transform(..), Scale(..), Fill(..), px, pt)
 
 
 svgIcon : String -> List (Svg msg) -> Html msg
@@ -103,4 +104,24 @@ x =
     svgIcon "x"
         [ line [ x1 (px 18), y1 (px 6), x2 (px 6), y2 (px 18) ] []
         , line [ x1 (px 6), y1 (px 6), x2 (px 18), y2 (px 18) ] []
+        ]
+
+-- blog logo
+initprism : Html msg
+initprism =
+    svg
+        [ class [ "icon" ]
+        , viewBox 0 0 310 310
+        , width (pt 310)
+        , height (pt 310)
+        ]
+        [ 
+            g [ transform [ Translate 0 310 
+                          , Scale 0.1 -0.1
+                          ] 
+              , fill <| Fill <| rgb255 179 193 217
+              ]
+              [
+               path [ d "M1410 3089 c-249 -37 -368 -71 -545 -158 -153 -75 -274 -161 -396 -281 -287 -283 -439 -628 -466 -1060 -8 -128 27 -355 79 -515 126 -383 380 -686 742 -884 295 -161 675 -217 1020 -150 674 131 1187 706 1235 1385 21 307 -32 577 -164 832 -203 391 -567 681 -985 785 -181 45 -395 64 -520 46z m-415 -1266 c206 -252 217 -267 204 -288 -8 -13 -104 -133 -214 -268 l-200 -246 -189 -1 c-156 0 -187 2 -183 14 3 7 96 125 206 260 111 136 201 252 201 259 0 6 -41 62 -91 122 -251 306 -320 395 -314 405 4 6 72 10 184 10 l178 0 218 -267z m414 150 l93 -113 589 0 c571 0 589 -1 599 -19 11 -21 14 -179 4 -205 -5 -14 -58 -16 -495 -16 -269 0 -489 -3 -489 -7 0 -5 9 -19 20 -33 18 -24 18 -25 -1 -57 l-21 -33 486 0 c470 0 486 -1 496 -19 11 -21 14 -179 4 -205 -6 -14 -67 -16 -593 -16 -322 0 -591 -4 -596 -8 -6 -4 -50 -55 -99 -114 l-88 -108 -184 0 c-123 0 -184 4 -184 11 0 5 88 118 195 250 107 131 200 247 206 258 11 16 -15 51 -199 276 -116 142 -209 262 -206 267 3 5 87 7 187 6 l182 -3 94 -112z" ] []
+              ]
         ]
