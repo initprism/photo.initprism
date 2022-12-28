@@ -886,10 +886,10 @@ view model =
                     else
                         Html.Attributes.class ""
             in
-            { title = "photo.initprism"
+            { title = "Taein's photo"
             , body =
                 [ Html.header [ Html.Attributes.id "title" ]
-                    [ Html.button [ Html.Attributes.class "title", onClick GoToTop ] [ Html.text "photo.initprism" ]
+                    [ Html.button [ Html.Attributes.class "title", onClick GoToTop ] [ Html.text "Taein's photo" ]
                     , Html.span [ Html.Attributes.class "burger" ]
                         [ Html.label []
                             [ Html.input
@@ -906,9 +906,9 @@ view model =
                 , Html.section [ Html.Attributes.id "aside", asideView ]
                     [ div [ Html.Attributes.id "map" ] []
                     , Html.header []
-                        [ Html.h1 [] [ Html.text "photo.initprism" ]
+                        [ Html.h1 [] [ Html.text "Taein's photo" ]
                         , Html.i [ Html.Attributes.class "quote" ]
-                            [ Html.text "personal photo gallery"
+                            [ Html.text "Pictures of pieces of my memory"
                             ]
                         ]
                     , div [ Html.Attributes.class "locale" ] [ Html.text model.locale ]
@@ -923,9 +923,11 @@ view model =
                         ]
                     , Html.footer []
                         [ Html.ul [ Html.Attributes.class "icons" ]
-                            [ Html.li [] [ Html.a [ Html.Attributes.href "https://www.github.com/initprism/photo.initprism" ] [ Icons.github ] ]
+                            [ 
+                              Html.li [] [ Html.a [ Html.Attributes.href "https://initprism.com" ] [ Icons.devLogo ] ]
+                            , Html.li [] [ Html.a [ Html.Attributes.href "https://blog.initprism.com" ] [ Icons.blogLogo ] ]
+                            , Html.li [] [ Html.a [ Html.Attributes.href "https://www.github.com/initprism/photo.initprism" ] [ Icons.github ] ]
                             , Html.li [] [ Html.a [ Html.Attributes.href "https://telegram.me/initprism" ] [ Icons.telegram ] ]
-                            , Html.li [] [ Html.a [ Html.Attributes.href "https://initprism.com" ] [ Icons.initprism ] ]
                             ]
                         ]
                     ]
@@ -959,7 +961,7 @@ view model =
                         Nothing ->
                             ( False, False )
             in
-            { title = "photo.initprism"
+            { title = "Taein's photo"
             , body =
                 [ zoomImage image model.showControls previousVisible nextVisible model.showDescription ]
             }
