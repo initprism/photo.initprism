@@ -22,9 +22,9 @@ mod map;
 use nominatim::Nominatim;
 mod nominatim;
 
-const CCA3_JSON: &str = include_str!("..\\world\\cca3.json");
-const MANIFEST_YAML: &str = include_str!("..\\world\\manifest.yaml");
-const ATTRIBUTION_YAML: &str = include_str!("..\\world\\attribution.yaml");
+const CCA3_JSON: &str = include_str!("../world/cca3.json");
+const MANIFEST_YAML: &str = include_str!("../world/manifest.yaml");
+const ATTRIBUTION_YAML: &str = include_str!("../world/attribution.yaml");
 
 lazy_static! {
     static ref CCA3: CountryCode = serde_json::from_str(&CCA3_JSON).unwrap();
@@ -524,10 +524,10 @@ fn write_locations(
             .ok_or(anyhow!("No latitude value in coordinates"))?;
 
         writeln!(manifest, "    {} ->", info.id)?;
-        writeln!(manifest, "    {{ name = \"{}\"", info.name)?;
-        writeln!(manifest, "    , country = {}", info.country)?;
-        writeln!(manifest, "    , coordinates = ( {:.3}, {:.3} )", lon, lat)?;
-        writeln!(manifest, "    }}")?;
+        writeln!(manifest, "        {{ name = \"{}\"", info.name)?;
+        writeln!(manifest, "        , country = {}", info.country)?;
+        writeln!(manifest, "        , coordinates = ( {:.3}, {:.3} )", lon, lat)?;
+        writeln!(manifest, "        }}")?;
     }
     Ok(())
 }

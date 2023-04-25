@@ -12,7 +12,7 @@ crass src/gallery.css --optimize > dist/assets/css/gallery.css
 elm make src/Main.elm --output=dist/assets/js/initprism.js --optimize
 
 # compress js
-uglifyjs dist/assets/js/initprism.js --compress pure_funcs='F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9',pure_getters,keep_fargs=false,unsafe_comps,unsafe | uglifyjs --mangle > dist/assets/js/initprism.min.js
+uglifyjs dist/assets/js/initprism.js --compress 'pure_funcs="F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9",pure_getters,keep_fargs=false,unsafe_comps,unsafe' | uglifyjs --mangle > dist/assets/js/initprism.min.js
 ```
 
 ## Serve
